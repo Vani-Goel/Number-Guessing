@@ -3,7 +3,14 @@
 #include <string> 
 #include <ctime>
 using namespace std;
-void rules();
+void rules()
+{
+    
+    cout << "\t\t======NUMBER GUESSING RULES!======\n";
+    cout << "\t1. Choose a number between 1 to 10\n";
+    cout << "\t2. If the guess is correct, the winner gets 10 times of the money bet\n";
+    cout << "\t3. Wrong bet, and you lose the amount you bet\n";
+}
 int main()
 {
     int balance; // for storing the balance entered by the player
@@ -17,13 +24,13 @@ int main()
     cout << "\n\t\t========WELCOME TO NUMBER GUESSING GAME=======\n\n";
     cout << "\n\nEnter your Name : ";
     getline(cin, playerName);
-    cout << "\n\nEnter the starting balance to play game : $";
+    cout << "\nEnter the starting balance to play game : $";
     cin >> balance;
     do
     {
-        system("cls");
+        
         rules();
-        cout << "\n\nYour current balance is $ " << balance << "\n";
+        cout << "\nYour current balance is $ " << balance << "\n";
 // To get the amount that the player wants to bet
         do
         {
@@ -60,18 +67,10 @@ int main()
             cout << "You have no money to play ";
             break;
         }
-        cout << "\n\n-->Do you want to play again (y/n)? ";
+        cout << "\n-->Do you want to play again (y/n)? ";
         cin >> choice;
     }while(choice =='Y'|| choice=='y');
     cout << "\n\n\n";
     cout << "\n\nThanks for playing the game. Your balance is $ " << balance << "\n\n";
     return 0;
-}
-void rules()
-{
-    system("cls");
-    cout << "\t\t======NUMBER GUESSING RULES!======\n";
-    cout << "\t1. Choose a number between 1 to 10\n";
-    cout << "\t2. If the guess is correct, the winner gets 10 times of the money bet\n";
-    cout << "\t3. Wrong bet, and you lose the amount you bet\n\n";
 }
